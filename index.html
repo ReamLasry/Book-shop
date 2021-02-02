@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title data-translate="page-title">📚book-shop📚</title>
+
+</head>
+
+<body>
+    <!-- TITLE -->
+    <div class="main-container">
+        <h1 data-translate="title" class="book-shop"><i>Sean Bookshop</i></h1>
+
+        <!-- LANGUAGE -->
+        <p data-translate="language">Language:</p>
+        <select onchange="onSetLang(this.value)">
+            <option value="en">English</option>
+            <option value="he">עברית</option>
+            <option value="es">Espagnol</option>
+        </select>
+        <!-- SORT -->
+        <p data-translate="sort">Sort By:</p>
+        <select onchange="onSortBy(this.value)">
+            <option></option>
+            <option data-translate="sort-name" value="name">Name</option>
+            <option data-translate="sort-price" value="price">Price</option>
+        </select>
+
+        <!-- NEW ITEM -->
+        <a data-translate="new-book">Create new book</a>
+        <form onsubmit="onAddBook()">
+            <div class="new-book-container">
+                <input data-translate="new-book-name" class="new-book-name" type="text" placeholder="New Book Name">
+                <input data-translate="new-book-price" class="new-book-price" type="text" placeholder="New Book price">
+                <input data-translate="new-book-image" class="new-book-image" type="text" placeholder="New Book image URL">
+            </div>
+            <button data-translate="new-book-add">Add book</button>
+            <div class="close-new-book">x</div>
+        </form>
+
+        <!-- TABLE -->
+        <section class="books">
+            <table class="main-table" border="1">
+                <thead class="titles">
+                    <tr>
+                        <th data-translate="table-id" class="head">Id</th>
+                        <th data-translate="table-title" class="head">Title</th>
+                        <th data-translate="table-price" class="head">price</th>
+                        <th data-translate="table-actions" class="head" colspan="3">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                </tbody>
+            </table>
+
+            <div class="book-details"></div>
+        </section>
+
+        <!-- PREVIOUS||NEXT PAGE -->
+        <div class="pages">
+            <button class="previous-page" onclick="onRenderPage(this)">&lt;&lt;</button>
+            <button class="next-page" onclick="onRenderPage(this)">&gt;&gt;</button>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/service/i18n-service.js"></script>
+    <script src="js/service/storage-service.js"></script>
+    <script src="js/service/book-service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

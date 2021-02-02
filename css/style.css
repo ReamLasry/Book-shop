@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+
+/* General */
+
+form {
+    display: none;
+    margin-bottom: 5px;
+}
+
+select {
+    cursor: pointer;
+}
+
+.new-book-container {
+    margin: 2px 0;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+body.rtl {
+    direction: rtl;
+}
+
+body {
+    background-image: url('../img/library.jpg');
+}
+
+.books {
+    display: flex;
+}
+
+.book-shop {
+    margin: auto;
+    width: 400px;
+}
+
+.main-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+    /* width: 100vh; */
+    height: fit-content;
+    border-radius: 7%;
+    background-color: rgba(128, 128, 128, 0.747);
+}
+
+
+/* New Book */
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+a:hover {
+    color: rgb(170, 24, 170);
+    text-decoration: underline;
+}
+
+
+/* Book list. */
+
+.main-table {
+    background-color: rgb(252, 65, 65);
+    border: 2px solid black;
+    /* width: 200px */
+}
+
+td {
+    border: 2px solid black;
+}
+
+.titles {
+    background-color: lightseagreen;
+}
+
+
+/* Book Read */
+
+.book-details {
+    background-color: rgba(179, 106, 106, 0.555);
+    border-radius: 7%;
+    display: none;
+    width: 360px;
+    height: 350px;
+}
+
+.book-details-container {
+    text-align: center;
+}
+
+.close {
+    border-radius: 50%;
+    margin-top: 7px;
+    margin-left: 320px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.book-price {
+    font-size: large;
+}
+
+.rate-text {
+    font-size: large;
+}
+
+.rate-container {
+    margin: 0 auto;
+    border-radius: 10%;
+    border: 2px solid black;
+    width: 57px;
+}
+
+.number {
+    text-align: center;
+    display: inline-block;
+    width: fit-content;
+}
+
+.book-name {
+    text-align: center;
+}
+
+.close-new-book {
+    cursor: pointer;
+    padding: 2px;
+    margin: 0;
+    display: inline-block;
+    border-radius: 40%;
+    width: 10px;
+    color: rgb(239, 239, 239);
+}
