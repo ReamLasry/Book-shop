@@ -1,4 +1,5 @@
 'use strict';
+var gCurrLang = getCurrLan();
 
 $(function oninit() {
     addOnClicks();
@@ -46,14 +47,14 @@ function onAddBook() {
     $newPrice = +$('.new-book-price').val('');
     $imgUrl = $('.new-book-image').val('');
     renderBooks();
-    var currLang = getCurrLan();
-    onSetLang(currLang);
+    onSetLang(gCurrLang);
 
 }
 
 function onSortBy(val) {
     sortBy(val);
     renderBooks();
+    onSetLang(gCurrLang);
 }
 
 function onUpdateBook(bookId) {
